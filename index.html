@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test maps</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 80%;
+            width: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center p-3">Equipo Alpha tiene Google Maps Api...</h1>
+    <div id="map"></div>
+    <script>
+        var map;
+
+            function initMap() {
+            const nunoa = { lat: -33.4561, lng: -70.5938 };
+            const providencia = { lat: -33.4561, lng: -70.6093 };
+            const santiago = { lat: -33.4489, lng: -70.6693 };
+            const lasCondes = { lat: -33.4088, lng: -70.5671 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: nunoa,
+                
+            });
+
+            new google.maps.Marker({
+                position: santiago,
+                map,
+                title: "Hello World!"
+            });
+            new google.maps.Marker({
+                position: nunoa,
+                map,
+                title: "Hello World!"
+            });
+            new google.maps.Marker({
+                position: providencia,
+                map,
+                title: "Hello World!"
+            });
+            new google.maps.Marker({
+                position: lasCondes,
+                map,
+                title: "Hello World!"
+            });
+
+            marker.setMap(map);
+
+            
+
+            
+        }
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1GucpRkmWB21geTiUfWGORwEt1E3utC0&callback=initMap"
+        async defer></script>
+</body>
+
+</html>
